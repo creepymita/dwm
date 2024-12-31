@@ -33,9 +33,9 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class         instance    title       tags mask     isfloating   monitor */
+	{ "Mugshot",     NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",     NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -80,10 +80,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Left,   rotatestack,    {.i = +1 } },
   { MODKEY|ShiftMask,             XK_Right,  rotatestack,    {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_l,      incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_k,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_i,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_o,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
@@ -99,9 +99,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY,                       XK_q,      setgaps,        {.i = -1 } },
+	{ MODKEY,                       XK_w,      setgaps,        {.i = +1 } },
+	{ MODKEY,                       XK_e,      setgaps,        {.i =  0 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
